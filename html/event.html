@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      div {
+        width: 100px;
+        height: 100px;
+        border: 2px solid #f2b441;
+        border-radius: 10px;
+      }
+      .box1 {
+        background: #f2d541;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box1">ease</div>
+    <script>
+      const box = document.querySelector(".box1");
+      //class box1 선택
+
+      box.addEventListener("mouseover", () => {
+        box.style.background = "red";
+      });
+      // 마우스오버 시 box 배경색을 레드로
+
+      box.addEventListener("mouseout", () => {
+        document.body.removeChild(box);
+      });
+      // 마우스가 영역 밖에 있으면 box가 사라짐.
+    </script>
+  </body>
+</html>

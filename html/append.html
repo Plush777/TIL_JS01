@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      .box1 {
+        width: 100px;
+        height: 100px;
+        border: 2px solid #f2b441;
+        border-radius: 10px;
+        text-align: center;
+        line-height: 100px;
+      }
+    </style>
+  </head>
+  <body>
+    <script>
+        const newBox1 = document.createElement('div'); //div 생성
+        newBox1.innerText = 'dave lee'; //div의 내용은 dave lee
+        newBox1.setAttribute('class','box1'); //div의 class는 box1
+        newBox1.style.background = '#f2d541'; //div의 배경색은 f2d541
+       
+        const newBox2 = document.createElement('div');
+        newBox2.innerText = '20210910'
+        newBox2.setAttribute('class','box2');
+        newBox2.style.background = '#f2d541';   
+
+        document.body.appendChild(newBox1); //body의 자식으로 생성
+        document.body.removeChild(newBox1); //body 자식요소 제거
+        document.body.appendChild(newBox2);
+    </script>
+  </body>
+</html>

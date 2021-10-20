@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      div {
+        width: 100px;
+        height: 100px;
+        border: 2px solid #f2b441;
+        border-radius: 10px;
+      }
+      .box1 {
+        background: #f2d541;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box1">ease</div>
+
+    <script>
+      const makeRed = () => box.style.background = "red";
+      const makeYellow = () => box.style.background = "#f2d541";
+
+      const box = document.querySelector(".box1"); //클래스 box1 선택
+      box.addEventListener("mouseover", makeRed); //마우스 오버시 
+      box.addEventListener("mouseout", makeYellow); //마우스 영역밖일때
+      box.addEventListener("click", () => { //클릭 시
+        box.removeEventListener("mouseover", makeRed); //makeRed 이벤트삭제
+        box.removeEventListener("mouseout", makeYellow); //makeYellow 이벤트삭제
+      });
+
+    </script>
+  </body>
+</html>
